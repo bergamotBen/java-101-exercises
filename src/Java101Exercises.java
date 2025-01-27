@@ -27,8 +27,8 @@ public class Java101Exercises {
      * @return      The sum
      */
     public static int addInts001(int a, int b) {
-        // TODO: Write code here
-        return 0;
+        int sum = a + b;
+        return sum;
     }
 
     /**
@@ -43,7 +43,9 @@ public class Java101Exercises {
      */
     public static String sayHello002(String name) {
         // TODO: Write code here
-        return null;
+        String greeting = "Hello ";
+        String bang = "!";
+        return greeting + name + bang;
     }
 
     /**
@@ -52,15 +54,15 @@ public class Java101Exercises {
      * Write a method to return an array of nine strings with the message below using asterisk.
      *
      *
-     *             * * * * *                 * *             * * * * * * *          * * * * * * * *     *                 *      * * * * * *
-     *           *           *            *       *          *             *        *                   *                 *      *           *
-     *         *               *       *             *       *              *       *                   *                 *      *            *
-     *       *                        *               *      *               *      *                   *                 *      *           *
-     *       *                        *               *      *               *      * * * * * * *       *                 *      * * * * * *
-     *       *                        *               *      *               *      *                   *                 *      *
-     *         *               *       *             *       *              *       *                    *               *       *
-     *           *           *            *       *          *             *        *                       *         *          *
-     *             * * * * *                 * *             * * * * * * *          * * * * * * * *            * * *             *
+     *"             * * * * *                 * *             * * * * * * *          * * * * * * * *     *                 *      * * * * * *",
+     *"           *           *            *       *          *             *        *                   *                 *      *           *",
+     *"         *               *       *             *       *              *       *                   *                 *      *            *",
+     *"       *                        *               *      *               *      *                   *                 *      *           *",
+     *"       *                        *               *      *               *      * * * * * * *       *                 *      * * * * * *",
+     *"       *                        *               *      *               *      *                   *                 *      *",
+     *"         *               *       *             *       *              *       *                    *               *       *",
+     *"           *           *            *       *          *             *        *                       *         *          *",
+     *"             * * * * *                 * *             * * * * * * *          * * * * * * * *            * * *             *",
      *
      *
      *
@@ -70,7 +72,18 @@ public class Java101Exercises {
      */
     public static String[] sayCodeup003() {
         // TODO: Write code here
-        return null;
+        String codeup[] = {
+            "             * * * * *                 * *             * * * * * * *          * * * * * * * *     *                 *      * * * * * *",
+            "           *           *            *       *          *             *        *                   *                 *      *           *",
+            "         *               *       *             *       *              *       *                   *                 *      *            *",
+            "       *                        *               *      *               *      *                   *                 *      *           *",
+            "       *                        *               *      *               *      * * * * * * *       *                 *      * * * * * *",
+            "       *                        *               *      *               *      *                   *                 *      *",
+            "         *               *       *             *       *              *       *                    *               *       *",
+            "           *           *            *       *          *             *        *                       *         *          *",
+            "             * * * * *                 * *             * * * * * * *          * * * * * * * *            * * *             *"
+        };
+        return codeup;
     }
 
     /**
@@ -85,7 +98,8 @@ public class Java101Exercises {
      */
     public static double addDouble004(double a, double b) {
         // TODO: Write code here
-        return 0.0;
+        double sum = a + b;
+        return sum;
     }
 
     /**
@@ -99,8 +113,8 @@ public class Java101Exercises {
      * @return      The joined strings
      */
     public static String concatenateStrings005(String a, String b) {
-        // TODO: Write code here
-        return null;
+        String joinedString = a.concat(" ").concat(b);
+        return joinedString;
     }
 
     /**
@@ -116,6 +130,9 @@ public class Java101Exercises {
      */
     public static boolean isEqual006(int a, int b) {
         // TODO: Write code here
+        if (a == b) {
+            return true;
+        }
         return false;
     }
 
@@ -132,6 +149,9 @@ public class Java101Exercises {
      */
     public static boolean isGreaterThan007(double a, double b) {
         // TODO: Write code here
+        if (a > b) {
+            return true;
+        }
         return false;
     }
 
@@ -144,7 +164,7 @@ public class Java101Exercises {
      * @return      The cubed value of the number.
      */
     public static double cube008(double a) {
-        return 0.0;
+        return a * a * a;
     }
 
     /**
@@ -159,7 +179,11 @@ public class Java101Exercises {
      */
     public static int calcPositiveDifference009(int a, int b) {
         // TODO: Write code here
-        return 0;
+        if (a > b) {
+            return a - b;
+        } else {
+            return b - a;
+        }
     }
 
     /**
@@ -174,7 +198,7 @@ public class Java101Exercises {
      */
     public static int calcRemainder010(int a, int b) {
         // TODO: Write code here
-        return 0;
+        return a % b;
     }
 
     /**
@@ -192,7 +216,27 @@ public class Java101Exercises {
      */
     public static double preformIndicatedOperation011(String operation, double op1, double op2) {
         // TODO: Write code here
-        return 0;
+        switch(operation) {
+            case "ADD": {
+                double result = op1 + op2;
+                return result;
+            }
+            case "SUB": {
+                double result = op1 - op2;
+                return result;
+            }
+            case "MUL": {
+                double result = op1 * op2;
+                return result;
+            }
+            case "DIV": {
+                double result = op1 / op2;
+                return result;
+            }
+            default: {
+                return 0.0;
+            }
+        }
     }
 
     /**
@@ -206,7 +250,14 @@ public class Java101Exercises {
      */
     public static ArrayList<Integer> findFactors012(int num) {
         // TODO: Write code here
-        return  null;
+        ArrayList<Integer> factors = new ArrayList<Integer>();
+        for (int i = 1; i <=num; i ++) {
+            if (num % i == 0) {
+                factors.add(i);
+            }
+        }
+        System.out.println(factors.toString());
+        return  factors;
     }
 
     /**
@@ -222,7 +273,14 @@ public class Java101Exercises {
      */
     public static int getNearestIntegerToRealSum013(double firstRealAddend, double secondRealAddend ) {
         // TODO: Write code here
-        return 0;
+        double sum = firstRealAddend + secondRealAddend;
+
+        if (sum % 1 == 0.5 || sum % 1 == -0.5) {
+            return (int) (sum > 0 ? Math.ceil(sum) : Math.floor(sum));
+        }
+
+        return (int) Math.round(sum);
+
     }
 
     /**
